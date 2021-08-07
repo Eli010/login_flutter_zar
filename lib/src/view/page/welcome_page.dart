@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
                      ),
                      BotonWidget(
                       icon: Icon(Icons.phone_android),
-                      textBoton: 'Ingrese con Teléfono', 
+                      textBoton: 'Ingrese con Email', 
                       colorPrimary: Color(0xFFFFA171), 
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, 'login');

@@ -79,28 +79,11 @@ Widget build(BuildContext context) {
                     // height: 200,
                   // ),
                   SizedBox(height: size.height*0.55),
-
-                  Input_widget(
-                    isPassword: false,
-                    keyboarType: TextInputType.emailAddress,
-                    hintext: 'email',
-                    suffixIcon: Icon(Icons.email,color: Color(0xFFFFA171),),
-                    ),
+                  _crearEmail(),
                   SizedBox(height: 25.0,),
-                  Input_widget(
-                    isPassword: true,
-                   hintext: 'contraseña',
-                   suffixIcon: Container(
-                     padding: EdgeInsets.only(top: 10.0),
-                     child: FaIcon(FontAwesomeIcons.key,color: Color(0xFFFFA171),
-                     ))
-                  ),
+                  _crearPassword(),
                   SizedBox(height: 40.0,),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 25.0),
-                    child: BotonWidgetDos(textBoton: 'Ingresar', colorPrimary:Color(0xFFFFA171), onPressed: (){}
-                    )
-                    ),
+                  _crearBotton(),
                   SizedBox(height: 25.0,),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 28.0),
@@ -145,4 +128,42 @@ Widget build(BuildContext context) {
       ),
     );
 }
+}
+
+Widget _crearEmail(){
+  return Container(
+    child:Input_widget(
+      isPassword: false,
+      keyboarType: TextInputType.emailAddress,
+      hintext: 'email',
+      suffixIcon: Icon(Icons.email,color: Color(0xFFFFA171),),
+      ),
+ 
+  );
+}
+
+
+Widget _crearPassword(){
+  return Container(
+    child:Input_widget(
+     isPassword: true,
+     hintext: 'contraseña',
+     suffixIcon: Container(
+       padding: EdgeInsets.only(top: 10.0),
+       child: FaIcon(FontAwesomeIcons.key,color: Color(0xFFFFA171),
+     ))
+    ),
+
+ 
+  );
+}
+
+
+Widget _crearBotton(){
+  return Container(
+    margin: EdgeInsets.symmetric(horizontal: 25.0),
+    child: BotonWidgetDos(textBoton: 'Ingresar', colorPrimary:Color(0xFFFFA171), onPressed: (){}
+    )
+    );
+
 }
