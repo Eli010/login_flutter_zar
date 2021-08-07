@@ -108,7 +108,7 @@ Widget build(BuildContext context) {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                       GestureDetector(
-                        child: Text('¿Olvidaste la contraseña?',style: TextStyle(
+                        child: const Text('¿Olvidaste la contraseña?',style: TextStyle(
                          fontFamily: 'letra',
                          color: Color(0xffFFA171),
                         //  fontWeight: FontWeight.bold,

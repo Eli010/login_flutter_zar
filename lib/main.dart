@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 //routes
-import 'package:login_food/src/routes/routes.dart';
+import 'package:login_food/src/view/routes/routes.dart';
  
-void main() => runApp(MyApp());
- 
+void main() async{ 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
