@@ -1,14 +1,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:login_food/src/routes/routes.dart';
 import 'package:login_food/src/widgets/boton_widget.dart';
 import 'package:login_food/src/widgets/header_widget.dart';
 import 'package:login_food/src/widgets/input_widget.dart';
 
 
-class SignUpPage extends StatelessWidget {
+class RegisterOnePage extends StatelessWidget {
 
-  
+static Widget create(BuildContext context) => RegisterOnePage();  
 
 @override
 Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ Widget build(BuildContext context) {
                               color: Colors.white,
                               ),
                               onTap: (){
-                                Navigator.popAndPushNamed(context, 'login');
+                                Navigator.pushNamed(context, Routes.emailSignIn);
                               },
                               ) ,
                         ),

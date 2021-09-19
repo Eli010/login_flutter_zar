@@ -1,6 +1,8 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:login_food/src/routes/routes.dart';
 import 'package:login_food/src/widgets/boton_widget.dart';
 import 'package:login_food/src/widgets/header_widget.dart';
 import 'package:login_food/src/widgets/input_widget.dart';
@@ -8,7 +10,7 @@ import 'package:login_food/src/widgets/input_widget.dart';
 
 class LoginPage extends StatelessWidget {
 
-  
+static Widget create(BuildContext context)=>LoginPage();
 
 @override
 Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ Widget build(BuildContext context) {
                               color: Colors.white,
                               ),
                               onTap: (){
-                                Navigator.popAndPushNamed(context, 'login');
+                                Navigator.pushNamed(context, Routes.welcome);
                               },
                               ) ,
                         ),
@@ -127,9 +129,7 @@ Widget build(BuildContext context) {
                          fontSize: 15 
                           ),
                          ),
-                         onTap: (){
-                           Navigator.pushReplacementNamed(context, 'signup');
-                         },
+                         onTap: ()=>Navigator.pushNamed(context, Routes.createAccount),
                     )
 
                         ],

@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "831789310390",
+    "project_id": "zarfeti-app-88e71",
+    "storage_bucket": "zarfeti-app-88e71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831789310390:android:733d5fe6987cb6ddb52117",
+        "android_client_info": {
+          "package_name": "com.elipacombia.zarfeti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831789310390-9omd8m7bqigi9e1sc0vmp946fhqt15pu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elipacombia.zarfeti",
+            "certificate_hash": "30b788a6a5c76e1de40cd7da167a2363818f453f"
+          }
+        },
+        {
+          "client_id": "831789310390-570vpin1pj6cgcudpp4lbc43seja1ibv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYcm95Ybju8_9yoc7Us5Dbc7gh5oF6pcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831789310390-570vpin1pj6cgcudpp4lbc43seja1ibv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831789310390:android:010845a987cf47edb52117",
+        "android_client_info": {
+          "package_name": "com.example.login_food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831789310390-570vpin1pj6cgcudpp4lbc43seja1ibv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYcm95Ybju8_9yoc7Us5Dbc7gh5oF6pcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831789310390-570vpin1pj6cgcudpp4lbc43seja1ibv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
