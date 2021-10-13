@@ -6,13 +6,17 @@ class Input_widget extends StatelessWidget {
   final TextInputType? keyboarType;
   final bool isPassword;
   final Widget? suffixIcon;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
   
   const Input_widget({
     this.icon, 
     this.hintext, 
     this.keyboarType, 
     required this.isPassword, 
-    this.suffixIcon,
+    this.suffixIcon, 
+    this.controller, 
+    this.validator,
   });
 
   @override
@@ -36,11 +40,14 @@ class Input_widget extends StatelessWidget {
         borderRadius: BorderRadius.circular(40.0),
         border: Border.all(color: Color(0xffFFA171).withOpacity(0.2)),                  
       ),
-      child: TextField(
+      child: TextFormField(
+        validator:validator,
+        controller: controller,
         keyboardType: this.keyboarType,
         obscureText: this.isPassword,
         // textAlign: TextAlign.center,
         decoration: InputDecoration(
+          
           hintText: this.hintext,
           hintStyle: TextStyle(
             color: Color(0xffFFA171),

@@ -15,6 +15,10 @@ abstract class AuthRepositoryBase{
 
   Future<AuthUser?> signInAnonymously();
   Future<AuthUser?> signInWithGoogle();
+  //cuales son los elementos a enviar
+  Future<AuthUser?> createWithEmailAndPassword(String email,String passsword);
+  //almacenamos datos
+  Future<AuthUser?> signInWithEmailAndPassword(String email,String passsword);
 
   Future<void> signOut();
 }

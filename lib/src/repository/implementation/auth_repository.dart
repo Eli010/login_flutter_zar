@@ -41,5 +41,17 @@ class AuthRepository extends AuthRepositoryBase{
     final authResult = await FirebaseAuth.instance.signInWithCredential(credential);
     return _userFromFirebase(authResult.user); 
   }
+  //con este metodo enviados los datos
+  @override
+  Future<AuthUser?> createWithEmailAndPassword(String email, String passsword) async{
+    final result = await _firebaseAuth.createUserWithEmailAndPassword(email: email, password:passsword);
+    return _userFromFirebase(result.user);
+  }
+
+  @override
+  Future<AuthUser?> signInWithEmailAndPassword(String email, String passsword) async{
+    final result = await _firebaseAuth.signInWithEmailAndPassword(email: email, password: passsword);
+    return _userFromFirebase(result.user);
+  }
 
 }
