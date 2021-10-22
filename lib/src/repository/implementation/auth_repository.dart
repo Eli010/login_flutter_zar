@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:login_food/src/repository/auth_repository.dart';
 
@@ -54,4 +55,14 @@ class AuthRepository extends AuthRepositoryBase{
     return _userFromFirebase(result.user);
   }
 
+  @override
+  Future<AuthUser?> signInWithFacebook() async {
+    
+    final  loginResult = await FacebookAuth.instance.login();
+
+    final  facebookAuthCredential = FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+    final authResult = await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+    return _userFromFirebase(authResult.user);
+  }
 }

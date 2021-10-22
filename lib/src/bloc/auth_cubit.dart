@@ -26,6 +26,8 @@ class AuthCubit extends Cubit<AuthState>{
 
   Future<void> signInWithGoogle()=> _signIn(_authRepository.signInWithGoogle());
 
+  Future<void> signInWithFacebook()=> _signIn(_authRepository.signInWithFacebook());
+
  //enviamos al firebase
   Future<void> createWithEmailAndPassword(String email, String password)=>
    _signIn(_authRepository.createWithEmailAndPassword(email, password));

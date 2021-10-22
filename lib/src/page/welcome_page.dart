@@ -60,8 +60,7 @@ Widget build(BuildContext context) {
                           icon: FaIcon(FontAwesomeIcons.facebook),
                           textBoton: 'Ingrese con facebook', 
                           colorPrimary: Colors.blue[300], 
-                          onPressed: (){
-                          }
+                          onPressed: ()=> context.read<AuthCubit>().signInWithFacebook(),
                          ),
                          BotonWidget(
                           icon: Icon(Icons.email),
